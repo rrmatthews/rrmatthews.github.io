@@ -12,6 +12,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/custom.css" />
 	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 </head>
 
@@ -39,6 +40,7 @@
 				</li>
 				<li><a href="https://twitter.com/rrmatthews_/" class="icon fa-twitter"><span
 							class="label">Twitter</span></a></li>
+				<li><a href="mailto:me@rrmatthews.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
 				<li><a href="tel:4048952339" class="icon fa-phone"><span class="label">Call Me</span></a></li>
 			</ul>
 		</footer>
@@ -57,40 +59,22 @@
 						<h2>DocFinder</h2>
 					</header>
 					<h4>Find the doctor you need. Where you need. When you need.</h4>
-					<p>DocFinder serves as a fully voice-interactive web-based application that matches patients with
-						medical providers
-						in their area using search metrics such as insurance, specialty, and languages spoken. The
-						results, which are displayed
-						on an interactive map interface, include important yet often overlooked statistics on medical
-						providers, including payouts
-						from big pharmaceutical companies to promote their products.</p>
+					<p><em>A voice-interactive healthcare app I built with three classmates at Brandeis (2017&ndash;2018), and winner of the AVIOS Student Speech Application Contest.</em></p>
+					<p>DocFinder is a fully voice-interactive web application that matches patients with medical providers in their area using search criteria such as insurance, specialty, and languages spoken. Results appear on an interactive map and surface details that are often overlooked, including the payments doctors receive from pharmaceutical companies to promote their products.</p>
 					<img src="images/docfinder1.png" width="90%">
-					<p>From the home screen, users can click on the microphone icon and speak their request for a doctor
-						based off of their specialty,
-						location, insurance, and spoken languages. For example, “Find me a dermatologist in Waltham, MA
-						who takes Aetna". From here, the
-						application sends the utterance to the DialogFlow API, which parses the string into specific
-						categories: the type of doctor,
-						location, and insurance company. The API returns a JSON object with these parameters, which the
-						application then sends to the
-						BetterDoctor API. This API is a doctor database that holds various information of many doctors
-						throughout the United States.
-						BetterDoctor API returns a JSON object of doctors that fit the specified criteria that presented
-						to the user as a table of doctors
-						from which they can chose as ordered by proximity.</p>
+					<p>From the home screen, a user taps the microphone and speaks a request, naming a specialty,
+						location, insurance, and preferred language &mdash; for example, &ldquo;Find me a dermatologist in Waltham, MA
+						who takes Aetna.&rdquo; The app sends that phrase to the DialogFlow API, which parses it into structured
+						fields (doctor type, location, and insurance) and returns them as JSON. DocFinder passes those
+						parameters to the BetterDoctor API, a nationwide provider database, which responds with matching
+						doctors. The app then presents them in a table ordered by proximity.</p>
 					<img src="images/docfinder2.png" width="90%">
-					<p>Each doctor in the list is connected to a modal pop-up profile that displays a photo, biography,
-						and other important information
-						relevant to their practice. The profiles also contain a chart that shows payments received from
-						pharmaceutical companies; courtesy
-						of the Open Payments Data API. And each doctor also has a location marked on a small Google Maps
-						map that shows the locations of
-						doctors in relation to the user’s own location.</p>
+					<p>Each result opens a profile with a photo, biography, and other details relevant to the doctor's
+						practice. The profile also includes a chart of payments received from pharmaceutical companies,
+						courtesy of the Open Payments Data API, and a Google Maps marker showing the doctor's location
+						relative to the user.</p>
 					<img src="images/docfinder4.png" width="90%">
-					<p>DocFinder users can also take advantage of user profiles to favorite specific doctors and log
-						their medication prescriptions.
-						Users can readily search for drug information in the included drug information search engine
-						courtesy of the Iodine API.</p>
+					<p>Signed-in users can also favorite specific doctors, log their prescriptions, and look up drug information through a built-in search engine powered by the Iodine API.</p>
 					<img src="images/docfinder5.png" width="90%">
 					<br>
 					<br>

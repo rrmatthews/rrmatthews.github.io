@@ -1,0 +1,134 @@
+/* Custom refresh layer — additive tweaks on top of the HTML5 UP "Read Only" template.
+   Keeps the existing layout and teal accent (#4acaa8); just modernizes the feel. */
+
+:root {
+	--accent: #4acaa8;
+	--accent-dark: #38b394;
+}
+
+/* Crisper type rendering and a touch more breathing room in body copy. */
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+#main p,
+#main li {
+	line-height: 1.85;
+}
+
+#main p {
+	margin-bottom: 1.25em;
+}
+
+/* Smoother link interactions. */
+#main a {
+	transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+#main a:hover {
+	color: var(--accent-dark);
+}
+
+/* Avatar: subtle ring + lift so the header feels a little more finished. */
+.image.avatar img {
+	border: 3px solid rgba(255, 255, 255, 0.6);
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+	transition: transform 0.25s ease;
+}
+
+.image.avatar img:hover {
+	transform: scale(1.03);
+}
+
+/* Skill list: gentle hover so the icons feel interactive. */
+ul.feature-icons li {
+	transition: color 0.2s ease;
+}
+
+ul.feature-icons li:hover {
+	color: #555;
+}
+
+ul.feature-icons li:hover:before {
+	color: var(--accent);
+}
+
+/* Project cards: soft hover lift for a more current feel. */
+.features article {
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+	border-radius: 6px;
+}
+
+.features article:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+}
+
+.features article .image img {
+	border-radius: 6px 6px 0 0;
+}
+
+/* Slightly more comfortable measure for long-form reading on wide screens. */
+#main .container header.major + p,
+#about p {
+	max-width: 50em;
+}
+
+/* Experience timeline: a vertical line with dotted milestones. */
+ul.timeline {
+	list-style: none;
+	margin: 2em 0 0 0;
+	padding: 0;
+	position: relative;
+}
+
+ul.timeline:before {
+	content: '';
+	position: absolute;
+	left: 7px;
+	top: 6px;
+	bottom: 6px;
+	width: 2px;
+	background: #ececec;
+}
+
+ul.timeline > li {
+	position: relative;
+	padding: 0 0 2em 2.75em;
+}
+
+ul.timeline > li:last-child {
+	padding-bottom: 0;
+}
+
+ul.timeline > li:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 5px;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: #fff;
+	border: 3px solid var(--accent);
+	box-sizing: border-box;
+}
+
+ul.timeline .date {
+	display: block;
+	font-size: 0.8em;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #aaa;
+	margin-bottom: 0.25em;
+}
+
+ul.timeline h4 {
+	margin: 0 0 0.5em 0;
+}
+
+ul.timeline p {
+	margin-bottom: 0;
+}
